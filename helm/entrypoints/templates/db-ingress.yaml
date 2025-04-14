@@ -1,0 +1,28 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: database
+  namespace: database
+  annotations:
+    traefik.ingress.kubernetes.io/router.entrypoints: web
+    traefik.ingress.kubernetes.io/rule-type: PathPrefix
+spec:
+  ingressClassName: traefik
+  rules:
+    - host: localhost
+      http:
+        paths:
+          - path: /db/rw
+            pathType: Prefix
+            backend:
+              service:
+                name: postgres-rw
+                port:
+                  number: 5432
+          - path: /db/ro
+            pathType: Prefix
+            backend:
+              service:
+                name: postgres-ro
+                port:
+                  number: 5432
