@@ -6,7 +6,7 @@ version: 0.1.0
 appVersion: "9.2.0"
 dependencies:
 - name: mysql-operator
-  version: 9.2.0
+  version: 2.2.3
   repository: https://mysql.github.io/mysql-operator/
   tags:
   - mysql
