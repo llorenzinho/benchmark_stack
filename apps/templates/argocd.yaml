@@ -8,9 +8,9 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://argoproj.github.io/argo-helm
-    targetRevision: 7.8.24
-    chart: argo-cd
+    repoURL: https://github.com/llorenzinho/benchmark_stack.git
+    targetRevision: main
+    path: helm/argocd
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
@@ -18,3 +18,5 @@ spec:
     automated:
       prune: true
       selfHeal: true
+    syncOptions:
+        - CreateNamespace=true
