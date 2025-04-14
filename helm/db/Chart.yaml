@@ -1,0 +1,22 @@
+apiVersion: v2
+name: db
+description: A Helm chart for MySQL
+type: application
+version: 0.1.0
+appVersion: "9.2.0"
+dependencies:
+- name: mysql-operator
+  version: 9.2.0
+  repository: https://mysql.github.io/mysql-operator/
+  tags:
+  - mysql
+  - db
+  - database
+  - operators
+- name: mysql-innodbcluster
+  version: 2.2.3
+  repository: https://mysql.github.io/mysql-operator/
+  tags:
+  - mysql
+  - db
+  - database

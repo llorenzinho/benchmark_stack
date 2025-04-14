@@ -19,6 +19,6 @@ k3d cluster create test \
 
 helm install argocd helm/argocd
 
-## ArgoCD Self managed
+# Bootstrap
 
 kubectl apply -f app-of-apps.yaml
