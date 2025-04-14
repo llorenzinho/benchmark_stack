@@ -1,0 +1,14 @@
+apiVersion: v2
+name: entrypoints
+description: A Helm chart managing Cert Manager and ingresses
+type: application
+version: 0.1.0
+appVersion: "v1.17.1"
+dependencies:
+- name: cert-manager
+  condition: cert-manager.enabled
+  version: v1.17.1
+  repository: https://charts.jetstack.io
+  tags:
+  - cert-manager
+  - entrypoints

@@ -1,5 +1,8 @@
 argo-cd:
   fullnameOverride: argocd
+  configs:
+    cm:
+      server.basehref: /argocd
   dex:
     enabled: true
   notifications:
