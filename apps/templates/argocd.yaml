@@ -3,13 +3,15 @@ kind: Application
 metadata:
   name: argocd
   namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
   annotations:
     argocd.argoproj.io/sync-wave: "1" # Ensure this application is synced first
 spec:
   project: default
   source:
     repoURL: https://github.com/llorenzinho/benchmark_stack.git
-    targetRevision: main
+    targetRevision: HEAD
     path: helm/argocd
   destination:
     server: https://kubernetes.default.svc
