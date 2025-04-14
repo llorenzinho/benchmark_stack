@@ -1,0 +1,26 @@
+argocd:
+  server:
+    service:
+      type: LoadBalancer
+
+applications:
+  # monitoring:
+  #   enabled: true
+  #   repo: https://prometheus-community.github.io/helm-charts
+  #   chart: kube-prometheus-stack
+  #   version: 55.6.0
+  #   namespace: monitoring
+
+  # database:
+  #   enabled: true
+  #   repo: https://presslabs.github.io/charts
+  #   chart: mysql-operator
+  #   version: 0.6.1
+  #   namespace: mysql-operator
+
+  # kong:
+  #   enabled: true
+  #   repo: https://charts.konghq.com
+  #   chart: kong
+  #   version: 2.19.0
+  #   namespace: kong
