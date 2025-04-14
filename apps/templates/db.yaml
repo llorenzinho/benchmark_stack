@@ -15,7 +15,7 @@ spec:
     path: helm/db
   destination:
     server: https://kubernetes.default.svc
-    namespace: mysql
+    namespace: database
   syncPolicy:
     automated:
       prune: true
