@@ -1,11 +1,11 @@
 argo-cd:
   fullnameOverride: argocd
   dex:
-    enabled: false
+    enabled: true
   notifications:
     enabled: false
   applicationSet:
-    enabled: false
+    enabled: true
   server:
     extraArgs:
     - --insecure
